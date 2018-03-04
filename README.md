@@ -6,3 +6,7 @@
 ## Video 1: Functions as first class citizens.
 
 Copyright © [FunctionalHub.com](http://functionalHub.com) 2018. All rights reserved.
+
+<p align="center">
+<img src="./images/code.png" alt="Code" width="600"/>
+</p>

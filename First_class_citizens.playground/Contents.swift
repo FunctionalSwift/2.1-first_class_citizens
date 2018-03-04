@@ -16,13 +16,13 @@ func parseAsHTML(_ response: String) -> [String: AnyObject] {
     return [:]
 }
 
-func data(from url: URL) -> [String: AnyObject] {
+func data(from url: URL, parser: (String) -> [String: AnyObject]) -> [String: AnyObject] {
     let data = NSData(contentsOf: url)! as Data
     let content = String(data: data, encoding: .utf8)!
     
-    return parseAsJSON(content)
+    return parser(content)
 }
 
 let url = URL(string: "http://swiftfuncional.com/exercises/posts/1")!
 
-data(from: url)
+data(from: url, parser: parseAsJSON)
